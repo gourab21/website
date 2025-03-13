@@ -29,7 +29,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/website/", // Ensure correct base path for GitHub Pages
+  base: "/", // Ensure correct base path for GitHub Pages
   plugins: [
     react(),
     mode === "development" ? componentTagger() : null,
