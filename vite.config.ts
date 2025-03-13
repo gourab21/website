@@ -23,11 +23,22 @@
 // }));
 
 
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+import { componentTagger } from "lovable-tagger";
 
-// vite.config.js
-import { defineConfig } from 'vite';
+export default defineConfig(({ mode }) => ({
+  base: "/website/", // Ensure correct base path for GitHub Pages
+  plugins: [
+    react(),
+    mode === "development" ? componentTagger() : null,
+  ].filter(Boolean),
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
+  },
+}));
 
-export default defineConfig({
-  base: '/website/', // Replace 'website' with your repository name
-  // other configurations
-});
+
