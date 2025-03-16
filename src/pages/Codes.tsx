@@ -82,9 +82,9 @@ const Codes = () => {
           <div className="max-w-6xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-bold mb-8">Code Projects</h1>
             
-            {/* Filter tags */}
-            <div className="mb-8 overflow-x-auto scrollbar-none">
-              <div className="flex space-x-2 min-w-max pb-2">
+            {/* Filter tags - Made horizontally scrollable on mobile */}
+            <div className="mb-8 overflow-x-auto pb-2 scrollbar-none">
+              <div className="flex space-x-2 min-w-max">
                 <button
                   onClick={() => setFilter(null)}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${

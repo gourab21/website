@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -11,7 +10,6 @@ const Resume = () => {
     document.title = "Portfolio | Resume";
   }, []);
 
-  // Sample experience data
   const experienceData: TimelineItemData[] = [
     {
       id: "1",
@@ -36,7 +34,6 @@ const Resume = () => {
     }
   ];
   
-  // Education data
   const educationData: TimelineItemData[] = [
     {
       id: "ed1",
@@ -54,7 +51,6 @@ const Resume = () => {
     }
   ];
 
-  // Sample publications data
   const publicationsData = [
     {
       title: "Modern JavaScript Frameworks: A Comparative Analysis",
@@ -76,7 +72,6 @@ const Resume = () => {
     }
   ];
 
-  // Sample awards data
   const awardsData = [
     {
       title: "Outstanding Contribution in Open Source",
@@ -95,7 +90,6 @@ const Resume = () => {
     }
   ];
 
-  // Sample projects data
   const projectsData = [
     {
       title: "E-Commerce Platform",
@@ -114,7 +108,6 @@ const Resume = () => {
     }
   ];
 
-  // Sample volunteering data
   const volunteeringData = [
     {
       role: "Mentor",
@@ -130,7 +123,6 @@ const Resume = () => {
     }
   ];
 
-  // Skills categories
   const skillCategories = [
     {
       name: "Programming Languages",
@@ -150,7 +142,6 @@ const Resume = () => {
     }
   ];
 
-  // Fields of interest
   const fieldsOfInterest = [
     "Web Development",
     "Frontend Architecture",
@@ -160,6 +151,30 @@ const Resume = () => {
     "Artificial Intelligence"
   ];
   
+  const referencesData = [
+    {
+      name: "Sarbajit Manna",
+      title: "Assistant Professor",
+      institution: "Ramakrishna Mission Vidyamandira",
+      email: "sarbajit.cs@vidyamandira.ac.in",
+      phone: "+91-94743 39952"
+    },
+    {
+      name: "Dr. Shalini Gupta",
+      title: "Assistant Professor",
+      institution: "ARSD College, University of Delhi",
+      email: "sgupta@arsd.du.ac.in",
+      phone: "+91-99111 55236"
+    },
+    {
+      name: "Dr. Arindam Sarkar",
+      title: "Assistant Professor (HOD)",
+      institution: "Ramakrishna Mission Vidyamandira",
+      email: "arindamsarkar@vidyamandira.ac.in",
+      phone: "+91-98517 00660"
+    }
+  ];
+  
   return (
     <div className="page-transition-wrapper animate-page-in min-h-screen flex flex-col">
       <Navbar />
@@ -167,7 +182,7 @@ const Resume = () => {
       <main className="flex-grow pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="flex justify-between items-start mb-8">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold mb-2">John Doe</h1>
                 <h2 className="text-xl text-foreground/80 mb-4">Senior Software Engineer</h2>
@@ -247,7 +262,7 @@ const Resume = () => {
               
               <a 
                 href="/resume.pdf" 
-                className="px-4 py-2 bg-primary text-primary-foreground rounded-md flex items-center gap-2 hover:bg-primary/90 transition-colors"
+                className="px-4 py-2 bg-primary text-primary-foreground rounded-md flex items-center gap-2 hover:bg-primary/90 transition-colors self-start mt-2 md:mt-0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -256,7 +271,6 @@ const Resume = () => {
               </a>
             </div>
 
-            {/* Fields of Interest Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Fields of Interest</h2>
               <div className="flex flex-wrap gap-3">
@@ -271,7 +285,6 @@ const Resume = () => {
               </div>
             </div>
             
-            {/* Education Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Education</h2>
               
@@ -286,7 +299,6 @@ const Resume = () => {
               </div>
             </div>
             
-            {/* Experience Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Experience</h2>
               
@@ -301,7 +313,6 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Publications Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Publications</h2>
               
@@ -325,7 +336,6 @@ const Resume = () => {
               </div>
             </div>
             
-            {/* Skills Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Skills</h2>
               
@@ -357,7 +367,6 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Awards Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Awards</h2>
               
@@ -371,7 +380,6 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Selected Projects Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Selected Projects</h2>
               
@@ -393,7 +401,6 @@ const Resume = () => {
               </div>
             </div>
             
-            {/* Certifications Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Certifications</h2>
               
@@ -417,7 +424,6 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Volunteering Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Volunteering</h2>
               
@@ -433,7 +439,6 @@ const Resume = () => {
               </div>
             </div>
             
-            {/* Languages Section */}
             <div className="mb-10">
               <h2 className="text-2xl font-bold mb-6">Languages</h2>
               
@@ -453,12 +458,27 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* References Section */}
             <div>
               <h2 className="text-2xl font-bold mb-6">References</h2>
               
-              <div className="glass-panel p-6 rounded-lg">
-                <p className="text-center">References available upon request.</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {referencesData.map((reference, index) => (
+                  <div key={index} className="glass-panel p-4 rounded-lg">
+                    <h3 className="font-medium">{reference.name}</h3>
+                    <p className="text-sm text-foreground/80">{reference.title}</p>
+                    <p className="text-sm text-foreground/70">{reference.institution}</p>
+                    <div className="mt-2 space-y-1 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Mail className="h-3.5 w-3.5 text-primary/80" />
+                        <span>{reference.email}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Phone className="h-3.5 w-3.5 text-primary/80" />
+                        <span>{reference.phone}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
